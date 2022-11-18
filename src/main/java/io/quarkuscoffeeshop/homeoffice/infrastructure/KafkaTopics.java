@@ -2,7 +2,7 @@ package io.quarkuscoffeeshop.homeoffice.infrastructure;
 
 public class KafkaTopics {
 
-    public static final String ORDERS_CREATED = "orders-created";
+    public static final String ORDERS_CREATED = "orders-in";
 
     public static final String ORDERS_UPDATED = "orders-updated";
 

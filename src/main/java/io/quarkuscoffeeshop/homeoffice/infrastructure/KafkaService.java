@@ -71,16 +71,6 @@ public class KafkaService {
         LOGGER.debug("Order : {}", order);
     }
 
-    @Incoming(WEB_UPDATES)
-    @Blocking
-    @Transactional
-    public void onWebUpdates(final IngressOrder ingressOrder) {
-
-        LOGGER.debug("[web-updates] IngressOrder received: {}", ingressOrder);
-        Order order = convertIngressOrderToOrder(ingressOrder);
-        LOGGER.debug("Order : {}", order);
-    }
-
     @Incoming(ORDERS_UPDATED)
     @Blocking
     @Transactional

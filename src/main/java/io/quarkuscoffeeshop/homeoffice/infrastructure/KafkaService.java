@@ -37,6 +37,8 @@ public class KafkaService {
     protected Order convertIngressOrderToOrder(final IngressOrder ingressOrder) {
 
         List<LineItem> lineItems = new ArrayList<>();
+	String storeLocation;
+	
         if (ingressOrder.getBaristaLineItems().isPresent()) {
             ingressOrder.getBaristaLineItems().get().forEach(l -> {
                 lineItems.add(new LineItem(l.getItem(), BigDecimal.valueOf(3.00), l.getName()));
@@ -66,6 +68,7 @@ public class KafkaService {
 
         LOGGER.debug("IngressOrder received: {}", ingressOrder);
         Order order = convertIngressOrderToOrder(ingressOrder);
+	order.persist();
         LOGGER.debug("Order : {}", order);
     }
     

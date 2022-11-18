@@ -2,6 +2,6 @@ package io.quarkuscoffeeshop.homeoffice.infrastructure.domain;
 
 public enum EventType {
 
-    OrderCreated, OrderUpdated, LoyaltyMemberPurchase;
+    OrderCreated, OrderUpdated, LoyaltyMemberPurchase, OrderIn;
 
 }

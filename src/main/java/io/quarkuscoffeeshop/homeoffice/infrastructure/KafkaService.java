@@ -68,7 +68,6 @@ public class KafkaService {
 
         LOGGER.debug("IngressOrder received: {}", ingressOrder);
         Order order = convertIngressOrderToOrder(ingressOrder);
-	order.persist();
         LOGGER.debug("Order : {}", order);
     }
     

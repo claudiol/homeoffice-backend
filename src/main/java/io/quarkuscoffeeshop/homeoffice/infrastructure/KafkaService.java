@@ -84,7 +84,7 @@ public class KafkaService {
     @Incoming(ORDERS_UPDATED)
     @Blocking
     @Transactional
-    public void onOrderUpated(final IngressOrder ingressOrder) {
+    public void onOrderUpdated(final IngressOrder ingressOrder) {
 
         LOGGER.debug("IngressOrder received: {}", ingressOrder);
         Order order = convertIngressOrderToOrder(ingressOrder);

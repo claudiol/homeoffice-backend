@@ -28,7 +28,8 @@ public class IngressOrder {
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
     public IngressOrder(
-            @JsonProperty("orderId") String orderId,
+            //@JsonProperty("orderId") String orderId,
+            @JsonProperty("id") String orderId,
             @JsonProperty("orderSource") OrderSource orderSource,
             @JsonProperty("eventType") EventType eventType,
             @JsonProperty("loyaltyMemberId") String loyaltyMemberId,
